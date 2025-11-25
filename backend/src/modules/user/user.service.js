@@ -19,7 +19,6 @@ class EmployeeService {
           e.class.toLowerCase().includes(term)
       );
     }
-    console.log("sortField", sortField);
 
     if (sortField) {
       data.sort((a, b) => {

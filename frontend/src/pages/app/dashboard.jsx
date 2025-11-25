@@ -404,9 +404,6 @@ export default function Dashboard() {
     { isLoading: isUpdating, data: updateData, error: updateError },
   ] = useUpdateEmployeeMutation();
 
-  console.log("data, error:", data, error);
-  console.log("updateData, updateError:", updateData, updateError);
-
   useEffect(() => {
     if (updateError) {
       const msg =

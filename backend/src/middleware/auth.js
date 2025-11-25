@@ -43,11 +43,7 @@ export function buildContext({ req }) {
         });
       }
 
-      console.log("user in context", user);
-
       const result = await engine.run({ role: user.role });
-      console.log("result", result);
-      console.log("permissionEventType", permissionEventType);
 
       const granted = result.events.some(
         (event) => event.type === permissionEventType
