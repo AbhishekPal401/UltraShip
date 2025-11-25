@@ -50,7 +50,7 @@ export function buildContext({ req }) {
       );
 
       if (!granted) {
-        throw new GraphQLError("You do not have the necessary permissions.", {
+        throw new GraphQLError("You do not have the necessary permissions", {
           extensions: {
             code: FORBIDDEN_CODE,
             http: { status: 403 },
