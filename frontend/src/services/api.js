@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { url } from "../config";
 
 export const graphqlBaseQuery =
   ({ baseUrl }) =>
@@ -39,6 +40,6 @@ export const graphqlBaseQuery =
 
 export const api = createApi({
   reducerPath: "api",
-  baseQuery: graphqlBaseQuery({ baseUrl: "http://localhost:8000" }),
+  baseQuery: graphqlBaseQuery({ baseUrl: url }),
   endpoints: () => ({}),
 });
