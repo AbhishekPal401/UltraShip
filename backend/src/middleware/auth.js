@@ -13,7 +13,7 @@ export function buildContext({ req }) {
 
   try {
     if (token) {
-      user = jwt.verify(token, process.env.APP_SECRET);
+      user = jwt.verify(token, process.env.APP_SECRET || "super_secret_key");
     }
   } catch (_) {
     user = null;
